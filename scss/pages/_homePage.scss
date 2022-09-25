@@ -1,0 +1,145 @@
+@use "../abstract/vars";
+@use "../abstract/mixins";
+
+
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .banner {
+    .carousel-indicators [data-bs-target].active {
+      background: vars.$green;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 10px; /* change width */
+      height: 10px; /* change height */
+      padding: 0;
+      margin-right: 3px;
+      margin-left: 3px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 0;
+      // border-top: 10px solid transparent;
+      // border-bottom: 10px solid transparent;
+      opacity: 0.5;
+      transition: opacity 0.6s ease;
+      border-radius: 100%; // /* add border-radius */
+    }
+
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 50%;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      text-align: left;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 500px;
+      // height: 100%;
+
+      @include mixins.media(1100px) {
+        top: 40%;
+      }
+
+      h5 {
+        color: vars.$white;
+        font-size: 50px;
+        text-transform: capitalize;
+
+        @include mixins.media(992px) {
+          font-size: 40px;
+        }
+      }
+
+      p {
+        color: vars.$white;
+        margin: 25px 0;
+      }
+
+      .btn {
+        background: vars.$white;
+        color: vars.$green;
+        border: none;
+        border-radius: 0;
+        padding: 7px 30px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .subjects {
+    padding: 50px 0;
+
+    .card {
+      height: 240px;
+      width: 31%;
+      width: 180px;
+      border: 1.5px solid vars.$green;
+      border-radius: 0;
+      text-align: center;
+      background: rgba(17, 181, 130, 0.05);
+      padding-top: 30px;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .card-subtitle {
+      font-size: 15px;
+      color: vars.$whiteSmoke;
+      margin-top: 15px;
+    }
+
+    .card-title {
+      font-size: 20px;
+    }
+  }
+
+  .courses {
+    padding: 50px 0;
+
+    .course {
+      padding: 20px 20px 10px;
+      width: 32%;
+      background: rgba(17, 181, 130, 0.05);
+      // border: 1px solid;
+
+      // media
+      @include mixins.media(992px) {
+        min-width: 255px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .course-title {
+        font-size: 25px;
+        margin-top: 20px;
+        font-weight: 500;
+        text-align: center;
+
+        @include mixins.media(768px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

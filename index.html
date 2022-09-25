@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- HEEBO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+
+    <!-- Bootstrap CSS -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!--  -->
+
+    <!--  FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--  -->
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>MagicEdu</title>
+  </head>
+  <body>
+    <div class="login-register d-flex align-items-start justify-content-end">
+      <div
+        class="login active d-flex flex-column align-items-center justify-content-center"
+      >
+        <i class="closeModal fa-solid fa-xmark"></i>
+        <div class="btns-div d-flex gap-2 justify-content-center">
+          <button id="loginBtn" class="btn active loginBtn">Login</button>
+          <button id="registerBtn" class="btn registerBtn">Register</button>
+        </div>
+        <form class="form d-flex flex-column align-items-stretch gap-3">
+          <h4>Login now</h4>
+          <input
+            type="email"
+            autocomplete="username"
+            placeholder="enter your email"
+            class="email"
+          />
+          <input
+            type="password"
+            placeholder="enter your password"
+            autocomplete="current-password"
+            class="password"
+          />
+          <div
+            class="remember d-flex justify-content-between align-items-center"
+          >
+            <label for="check" class="d-flex align-content-center gap-1">
+              <input type="checkbox" id="check" />
+              <span>remember me</span>
+            </label>
+            <p class="m-0">forgot password?</p>
+          </div>
+          <button class="btn">login now</button>
+        </form>
+      </div>
+      <div
+        class="register d-flex flex-column align-items-center justify-content-center"
+      >
+        <i class="closeModal fa-solid fa-xmark"></i>
+        <div class="btns-div d-flex gap-2 justify-content-center">
+          <button class="btn loginBtn">Login</button>
+          <button class="btn active registerBtn">Register</button>
+        </div>
+        <form class="form d-flex flex-column align-items-stretch gap-3">
+          <h4>register now</h4>
+          <input
+            type="email"
+            autocomplete="username"
+            placeholder="enter your email"
+            class="email"
+          />
+          <input
+            type="password"
+            autocomplete="current-password"
+            placeholder="enter your password"
+            class="password"
+          />
+          <input
+            type="password"
+            autocomplete="new-password"
+            placeholder="confirm your password"
+            class="password"
+          />
+
+          <button class="btn">register now</button>
+        </form>
+      </div>
+    </div>
+    <ul class="side-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="./index.html"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./ourCourses.html">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./contact.html">Contact</a>
+      </li>
+    </ul>
+    <div class="homePage">
+      <header class="header">
+        <div class="container d-flex align-items-center">
+          <nav class="navbar p-0 m-0 w-100">
+            <div class="logo-div d-flex align-items-center">
+              <i class="fa-solid fa-lightbulb"></i>
+              <h3 class="logo-title">MagicEDU</h3>
+            </div>
+            <div class="wrapper d-flex align-items-center">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./ourCourses.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact</a>
+
+                </li>
+              </ul>
+              <div class="burger-menu d-flex align-items-center gap-3">
+                <i class="fa-solid fa-bars burger-menu-icon order-2"></i>
+                <i class="fa-solid fa-user-large"></i>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <section class="banner">
+          <div
+            id="carouselExampleDark"
+            class="carousel carousel-dark slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <img
+                  src="./images/home-slide-1.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="container">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>The best courses you will find here!</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptate est culpa obcaecati sit cupiditate qui?
+                    </p>
+                    <button class="btn">Get Started</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img
+                  src="./images/home-slide-2.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="container">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>The best courses you will find here!</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptate est culpa obcaecati sit cupiditate qui?
+                    </p>
+                    <button class="btn">Get Started</button>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img
+                  src="./images/home-slide-3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="container">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>The best courses you will find here!</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptate est culpa obcaecati sit cupiditate qui?
+                    </p>
+                    <button class="btn">Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+        <section class="subjects">
+          <div class="container">
+            <h3 class="sec-title">Our popular subjects</h3>
+            <div
+              class="wrapper d-flex justify-content-center gap-4 justify-content-xl-between flex-wrap"
+            >
+              <!-- subject1 -->
+              <div class="subject">
+                <div class="card">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./images/subject-icon-1.png"
+                      class="card-img-top"
+                      alt="card-icon"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-2">Graphic design</h5>
+                    <h6 class="card-subtitle">12 modules</h6>
+                  </div>
+                </div>
+              </div>
+              <!-- subject2-->
+              <div class="subject">
+                <div class="card">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./images/subject-icon-2.png"
+                      class="card-img-top"
+                      alt="card-icon"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-2">Graphic design</h5>
+                    <h6 class="card-subtitle">12 modules</h6>
+                  </div>
+                </div>
+              </div>
+              <!-- subject3-->
+              <div class="subject">
+                <div class="card">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./images/subject-icon-3.png"
+                      class="card-img-top"
+                      alt="card-icon"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-2">Graphic design</h5>
+                    <h6 class="card-subtitle">12 modules</h6>
+                  </div>
+                </div>
+              </div>
+              <!-- subject4-->
+              <div class="subject">
+                <div class="card">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./images/subject-icon-4.png"
+                      class="card-img-top"
+                      alt="card-icon"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-2">Graphic design</h5>
+                    <h6 class="card-subtitle">12 modules</h6>
+                  </div>
+                </div>
+              </div>
+              <!-- subject5-->
+              <div class="subject">
+                <div class="card">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./images/subject-icon-5.png"
+                      class="card-img-top"
+                      alt="card-icon"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-2">Graphic design</h5>
+                    <h6 class="card-subtitle">12 modules</h6>
+                  </div>
+                </div>
+              </div>
+              <!-- subject6-->
+              <div class="subject">
+                <div class="card">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./images/subject-icon-6.png"
+                      class="card-img-top"
+                      alt="card-icon"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title mb-2">Graphic design</h5>
+                    <h6 class="card-subtitle">12 modules</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="courses">
+          <div class="container">
+            <h3 class="sec-title">Our popular courses</h3>
+            <div
+              class="wrapper d-flex justify-content-center justify-content-lg-between gap-4 flex-wrap flex-lg-nowrap"
+            >
+              <!-- course -->
+              <div class="course d-flex flex-column">
+                <img src="./images/course-1-1.png" alt="course-img" />
+                <p class="course-title">Web Development</p>
+              </div>
+
+              <!-- course -->
+              <div class="course d-flex flex-column">
+                <img src="./images/course-1-1.png" alt="course-img" />
+                <p class="course-title">Web Development</p>
+              </div>
+
+              <!-- course -->
+              <div class="course d-flex flex-column">
+                <img src="./images/course-1-1.png" alt="course-img" />
+                <p class="course-title">Web Development</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="top">
+          <div class="container">
+            <div
+              class="wrapper d-flex justify-content-center flex-wrap flex-md-nowrap justify-content-md-between gap-4"
+            >
+              <div class="box">
+                <div class="logo-div d-flex align-items-center">
+                  <i class="fa-solid fa-lightbulb"></i>
+                  <h3 class="logo-title">Educa</h3>
+                </div>
+                <p class="">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit,
+                  laudantium.
+                </p>
+                <div
+                  class="sci d-flex justify-content-start gap-1 align-items-center"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+              </div>
+
+              <div class="box">
+                <h3 class="box-title">Quick Links</h3>
+
+                <ul class="d-flex flex-column gap-2">
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">courses</a></li>
+                  <li><a href="#">contact</a></li>
+                </ul>
+              </div>
+
+              <div class="box">
+                <h3 class="box-title">Useful Links</h3>
+
+                <ul class="d-flex flex-column gap-2">
+                  <li><a href="#">help center</a></li>
+                  <li><a href="#">ask question</a></li>
+                  <li><a href="#">send feedback</a></li>
+                  <li><a href="#">private policy</a></li>
+                  <li><a href="#">terms of use</a></li>
+                </ul>
+              </div>
+
+              <div class="box">
+                <h3 class="box-title">Newsletter</h3>
+
+                <ul class="d-flex flex-column gap-2">
+                  <li><a href="#">subscribe for latest updates</a></li>
+                </ul>
+                <div class="inputs d-flex flex-column align-items-start gap-3">
+                  <input type="email" placeholder="enter your email" />
+                  <button class="btn d-flex align-items-center">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="container">
+            <div class="wrapper text-center">
+              <p class="text-capitalize m-0">
+                Created by <span>MagicSoft group</span> <b>|</b> all rights
+                reserved!
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- bootstrap js -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>

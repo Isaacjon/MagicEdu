@@ -1,0 +1,130 @@
+@use "../abstract/vars";
+@use "../abstract/mixins";
+
+.side-nav {
+  z-index: 6;
+  display: block;
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  padding: 20px;
+  padding-top: 80px;
+  background: linear-gradient(to bottom, transparent 9%, white 9%);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  // display: none;
+  max-width: 10px;
+  transform: translateX(-100%);
+  overflow: hidden;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  @include mixins.media(992px) {
+    &.active {
+      max-width: 400px;
+      transform: translateX(0%);
+    }
+  }
+
+  @include mixins.media(550px) {
+    &.active {
+      max-width: 250px;
+    }
+  }
+
+  @include mixins.media(350px) {
+    // top: 35px;
+    z-index: 5;
+  }
+
+  li {
+    // width: 350px;
+    width: 100%;
+    background: #ccc;
+    border: 1.5px solid transparent;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    a {
+      font-weight: 500;
+      color: white;
+    }
+
+    &:hover {
+      background: rgba(17, 181, 130, 0.1);
+      border: 1.5px solid vars.$green;
+
+      a {
+        color: vars.$green;
+      }
+    }
+  }
+}
+nav {
+  min-height: 50px;
+  position: static !important;
+
+  @include mixins.media(600px) {
+    // flex-wrap: wrap !important;
+  }
+
+  .logo-div {
+    gap: 5px;
+    cursor: pointer;
+    max-width: 170px;
+
+    .logo-title {
+      font-weight: 500;
+      color: vars.$dark;
+      margin-bottom: 0;
+
+      @include mixins.media(600px) {
+        font-size: 20px;
+      }
+    }
+
+    i {
+      color: vars.$green;
+      font-size: 25px;
+      margin-top: 3px;
+      // transform: translate(50%, 50%);
+      @include mixins.media(600px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .nav {
+    @include mixins.media(992px) {
+      display: none;
+    }
+
+    .nav-link {
+      color: vars.$dark;
+    }
+  }
+
+  .burger-menu {
+    .burger-menu-icon {
+      font-size: 30px;
+      display: none;
+
+      @include mixins.media(992px) {
+        display: block;
+        position: sticky !important;
+        z-index: 10 !important;
+      }
+    }
+
+    .fa-user-large {
+      font-size: 20px;
+      cursor: pointer;
+
+      @include mixins.media(992px) {
+        font-size: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@use "../abstract/vars";
+@use "../abstract/mixins";
+
+.footer {
+  text-align: center;
+  background: rgba(17, 181, 130, 0.05);
+
+  .top {
+    padding: 20px 0;
+
+    .container {
+      border-bottom: 1.5px solid #11b582;
+      padding-bottom: 20px;
+    }
+
+    .inputs {
+      margin-top: 10px;
+
+      @include mixins.media(380px) {
+        align-items: center !important;
+      }
+    }
+
+    .inputs input {
+      background: vars.$white;
+      outline: none;
+      border: none;
+      border: 1.5px solid #11b582;
+      // padding: 0 10px;
+      height: 35px;
+      padding-left: 15px;
+      width: 100%;
+    }
+
+    .btn {
+      border: 1.5px solid #11b582;
+      background: transparent;
+      border-radius: 0;
+      color: vars.$green;
+      font-size: 18px;
+      height: 35px;
+    }
+  }
+
+  .logo-div {
+    gap: 5px;
+    cursor: pointer;
+    max-width: 170px;
+
+    .logo-title {
+      font-weight: 500;
+      color: vars.$dark;
+      margin-bottom: 0;
+      font-size: 20px;
+
+      @include mixins.media(600px) {
+        font-size: 20px;
+      }
+    }
+
+    i {
+      color: vars.$green;
+      font-size: 25px;
+      margin-top: 3px;
+      // transform: translate(50%, 50%);
+      @include mixins.media(600px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .top .container > .wrapper .box {
+    width: 25%;
+
+    @include mixins.media(768px) {
+      width: 45%;
+    }
+
+    @include mixins.media(380px) {
+      width: 80%;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      text-align: left;
+      margin: 20px 0;
+
+      @include mixins.media(380px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .top .box .sci i {
+    background: vars.$green;
+    color: vars.$white;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .top .box ul {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .top .box ul li a {
+    color: vars.$whiteSmoke;
+  }
+
+  .top .box .box-title {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .bottom {
+    padding: 0;
+    padding-bottom: 20px;
+
+    .wrapper {
+      p {
+        color: vars.$dark;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 2;
+        // media
+        @include mixins.media(400px) {
+          font-size: 18px;
+        }
+
+        b {
+          display: inline-block;
+          transform: translateY(-2px);
+          font-weight: 500;
+        }
+
+        span {
+          color: vars.$green;
+        }
+      }
+    }
+  }
+}

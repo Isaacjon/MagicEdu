@@ -1,0 +1,266 @@
+@use "../abstract/vars";
+@use "../abstract/mixins";
+
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .intro {
+    padding: 50px 0;
+    background: url("../../images/heading-bg.jpg") no-repeat center / cover;
+    //media
+    @include mixins.media(450px) {
+      padding: 25px 0;
+
+      h3 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+    p {
+      color: vars.$whiteSmoke;
+    }
+    span {
+      color: vars.$green;
+    }
+  }
+
+  .courses {
+    padding: 50px 0;
+    .img-box,
+    .content {
+      width: 100%;
+      max-width: 49%;
+    }
+
+    .img-box {
+      img {
+        width: 100%;
+      }
+
+      @include mixins.media(992px) {
+        max-width: 80%;
+      }
+
+      @include mixins.media(500px) {
+        max-width: 100%;
+      }
+    }
+
+    .content {
+      @include mixins.media(992px) {
+        max-width: 600px;
+        text-align: center;
+      }
+
+      .card {
+        height: 210px;
+        width: 31%;
+        width: 180px;
+        border: 1.5px solid vars.$green;
+        border-radius: 0;
+        text-align: center;
+        background: rgba(17, 181, 130, 0.05);
+        padding-top: 30px;
+      }
+
+      img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+      }
+
+      .card-subtitle {
+        font-size: 30px;
+      }
+
+      .card-title {
+        font-size: 15px;
+        color: vars.$whiteSmoke;
+        margin-top: 15px;
+      }
+
+      .content-title {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      .content-text {
+        color: vars.$whiteSmoke;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .teachers {
+    padding-bottom: 50px;
+
+    .sec-title {
+      width: 100%;
+      text-align: center;
+      // font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .myCard {
+      width: 31%;
+      min-width: 180px;
+
+      @include mixins.media(768px) {
+        min-width: 255px;
+      }
+
+      &:hover .sci {
+        bottom: 0%;
+      }
+
+      .img-box {
+        background: rgba(17, 181, 130, 0.08);
+      }
+
+      .pos {
+        position: relative;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+        background: linear-gradient(to top, #11b582 0%, transparent 0%);
+
+        &:hover {
+          transition: 0.5s;
+
+          background: linear-gradient(to top, #11b582 40%, transparent 0%);
+        }
+      }
+
+      .sci {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        height: 60px;
+        bottom: -100%;
+        transition: 0.5s;
+
+        @include mixins.media(768px) {
+          height: 40px;
+        }
+
+        i {
+          font-size: 30px;
+          color: white;
+          cursor: pointer;
+
+          @include mixins.media(768px) {
+            font-size: 20px;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .text {
+        margin-top: 15px;
+      }
+
+      .name {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      span {
+        font-weight: 600;
+        color: vars.$whiteSmoke;
+      }
+    }
+  }
+
+  .reviews {
+    padding-bottom: 50px;
+
+    .sec-title {
+      width: 100%;
+      text-align: center;
+      // font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    .myCard {
+      width: 31%;
+      min-width: 180px;
+
+      @include mixins.media(768px) {
+        min-width: 255px;
+      }
+
+      .top {
+        border: 2px solid vars.$green;
+        border-radius: 0;
+        text-align: center;
+        background: rgba(17, 181, 130, 0.05);
+        padding: 15px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: -1;
+
+        &::after {
+          content: "";
+          height: 20px;
+          width: 20px;
+          background: linear-gradient(
+            135deg,
+            transparent 0%,
+            rgba(17, 181, 130, 0.05) 50%
+          );
+          position: absolute;
+          bottom: -11px;
+          left: 50%;
+          transform: rotate(45deg);
+          margin-left: -10px;
+          right: 0;
+          border: 2px solid vars.$green;
+          border-top-color: transparent;
+          border-left-color: transparent;
+          z-index: 99;
+        }
+      }
+
+      .top p {
+        margin-bottom: 0;
+        color: vars.$whiteSmoke;
+      }
+
+      &:hover .sci {
+        bottom: 0%;
+      }
+
+      img {
+        width: 100%;
+        max-width: 70px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+
+      .name {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+
+      i {
+        font-weight: 600;
+        color: vars.$green;
+        font-size: 10px;
+      }
+    }
+  }
+}
