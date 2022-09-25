@@ -1096,7 +1096,8 @@ nav .burger-menu .fa-user-large {
 }
 .login-register .login,
 .login-register .register {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 500px;
   padding: 0 15px;
   position: relative;
