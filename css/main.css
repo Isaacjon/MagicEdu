@@ -1082,7 +1082,6 @@ nav .burger-menu .fa-user-large {
   z-index: 7;
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
   bottom: 0;
   min-width: 100vw;
@@ -1097,7 +1096,7 @@ nav .burger-menu .fa-user-large {
 }
 .login-register .login,
 .login-register .register {
-  width: 350px;
+  width: 400px;
   height: 500px;
   padding: 0 15px;
   position: relative;
@@ -1115,7 +1114,7 @@ nav .burger-menu .fa-user-large {
 .login-register .register .fa-xmark {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 30px;
   font-size: 30px;
   cursor: pointer;
 }
